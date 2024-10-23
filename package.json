@@ -1,0 +1,16 @@
+{
+  "name": "xepho",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/index.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./css/index.css -o ./css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  }
+}
