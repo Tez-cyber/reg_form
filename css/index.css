@@ -15,9 +15,8 @@
         @apply text-sm font-bold pl-4 pb-2
     }
 }
-input[type="checkbox"] {
-    border-color: red; /* Example color: blue */
-}
+
+
 /* Custom styles for the checkbox */
 .custom-checkbox {
     appearance: none;
