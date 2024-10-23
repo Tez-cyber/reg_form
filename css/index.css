@@ -4,7 +4,20 @@
 @tailwind utilities;
 
 
-
+@layer utilities {
+    .inputItem {
+        @apply border-bright border-[1.5px] border-solid w-full py-3 px-3 rounded-md placeholder:text-xs
+    }
+    .inputLabel {
+        @apply flex flex-col pb-5
+    }
+    .inputLabel label {
+        @apply text-sm font-bold pl-4 pb-2
+    }
+}
+input[type="checkbox"] {
+    border-color: red; /* Example color: blue */
+}
 /* Custom styles for the checkbox */
 .custom-checkbox {
     appearance: none;

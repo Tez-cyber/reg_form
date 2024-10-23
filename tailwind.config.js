@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: "Inter"
+      },
+      colors: {
+        bright: "#ff8000",
+        newGrey: "#f7f7fc"
       }
     },
   },

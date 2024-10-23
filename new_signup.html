@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>Sign-Up page</title>
 </head>
+
 <body>
-    
+    <main class="flex justify-center font-inter">
+        <!-- ================ First section =================== -->
+        <section class="w-1/2 bg-newGrey">
+            <div class="px-10 w-full py-[64px]">
+                <div class="">
+                    <h2 class="text-4xl pb-20 px-16 leading-snug font-semibold">Manage your courses <br> and team in an
+                        easy <br> way</h2>
+                </div>
+                <img class="w-[537] h-[369]" src="./assets/Frame.png" alt="">
+            </div>
+        </section>
+        <!-- ================ Second section =================== -->
+        <section class="w-1/2 p-[64px]">
+            <!-- === Top section === -->
+            <div class="">
+                <h2 class="text-2xl font-semibold">Sign up to Xepho</h2>
+                <!-- ===== buttons -->
+                <section class="py-10">
+                    <div class="">
+                        <button class="bg-bright w-full rounded-md py-2 text-sm text-white">Sign up with google</button>
+                    </div>
+                </section>
+                <!-- ======= OR text -->
+                <div class="flex items-center mb-6">
+                    <hr class="flex-1 border-gray-300" />
+                    <span class="mx-2 text-gray-500">Or</span>
+                    <hr class="flex-1 border-gray-300" />
+                </div>
+            </div>
+            <!-- ==== Form section ==== -->
+            <form action="" class="">
+                <div class="flex gap-4">
+                    <div class="inputLabel w-1/2 ">
+                        <label for="">Full Name</label>
+                        <input class="inputItem" type="text" placeholder="Input your full name here">
+                    </div>
+                    <div class="inputLabel w-1/2">
+                        <label for="">Username</label>
+                        <input class="inputItem" type="text" placeholder="Input your username here">
+                    </div>
+                </div>
+                <!-- ==== Email ==== -->
+                <div class="inputLabel">
+                    <label for="">Email</label>
+                    <input class="inputItem" type="email" placeholder="Input your email here">
+                </div>
+                <!-- ==== Password ==== -->
+                <div class="inputLabel">
+                    <label for="">Password</label>
+                    <input class="inputItem" type="password" placeholder="Input your password here">
+                </div>
+                <!-- ====== Terms of service -->
+                <section class="flex items-center">
+                    <input type="checkbox" class="mr-2 border-none" name="">
+                    <label for="" class="text-sm text-gray-400">
+                        I have read and agree to the Terms of Service
+                    </label>
+                </section>
+                <!-- ============== Create  -->
+                <section class="my-10 flex items-center justify-between">
+                    <button class="bg-bright rounded-md py-3 px-4 text-sm text-white">Create Account</button>
+                    <div class="text-sm">
+                        <span class="text-gray-400">
+                            Doesn’t have an account?
+                        </span>
+                        <span class="text-bright font-bold">
+                            <a href="./index.html">Sign in now</a>
+                        </span>
+                    </div>
+                </section>
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>
