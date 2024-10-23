@@ -9,17 +9,26 @@
 </head>
 
 <body>
-    <main class="flex justify-center font-inter">
+    <main class="flex flex-col justify-center font-inter md:flex-row">
         <!-- ================ First section =================== -->
-        <section class="w-1/2 bg-newGrey">
-            <div class="px-10 w-full py-[64px]">
+        <section class=" bg-newGrey md:w-1/2">
+            <div class="px-12 w-full py-[64px]">
                 <div class="">
-                    <h2 class="text-4xl pb-20 px-16 leading-snug font-semibold">Manage your courses <br> and team in an
-                        easy <br> way</h2>
+                    <!-- ========= Medium screen -->
+                    <h2 class="hidden text-4xl pb-20 px-16 leading-snug font-semibold md:block">Manage your courses <br>
+                        and team in an
+                        easy <br> way
+                    </h2>
+                    <!-- ================ Small screen ============= -->
+                    <h2 class="text-3xl pb-20  leading-snug font-semibold md:px-16 md:hidden">
+                        Manage your courses and team in an
+                        easy way
+                    </h2>
                 </div>
                 <img class="w-[537] h-[369]" src="./assets/Frame.png" alt="">
             </div>
         </section>
+
         <!-- ================ Second section =================== -->
         <section class="w-1/2 px-[64px] pt-[80px]">
             <!-- === Top section === -->
@@ -28,12 +37,15 @@
                 <!-- ===== buttons -->
                 <section class="py-10">
                     <div class="flex gap-4">
-                        <button class="bg-bright rounded-md w-[70%] py-2 text-sm text-white">Sign up with google</button>
+                        <button class="bg-bright rounded-md w-[70%] py-2 text-sm text-white">Sign up with
+                            google</button>
                         <div class="flex gap-2">
-                            <div class="border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md ">
+                            <div
+                                class="border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md ">
                                 <img src="./assets/spin.png" alt="">
                             </div>
-                            <div class="border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md">
+                            <div
+                                class="border-bright border-[1.5px] border-solid px-2 flex items-center object-contain rounded-md">
                                 <img src="./assets/spin.png" alt="">
                             </div>
                         </div>

@@ -940,6 +940,16 @@ video {
   padding-right: 64px;
 }
 
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .pb-20{
   padding-bottom: 5rem;
 }
@@ -1201,7 +1211,28 @@ input:focus {
 }
 
 @media (min-width: 768px){
+  .md\:block{
+    display: block;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:w-1\/2{
+    width: 50%;
+  }
+
   .md\:flex-row{
     flex-direction: row;
+  }
+
+  .md\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
