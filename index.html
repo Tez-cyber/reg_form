@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In UI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <style>
+        /* Custom styles for the checkbox */
+        .custom-checkbox {
+            appearance: none;
+            width: 1.25rem; /* 20px */
+            height: 1.25rem; /* 20px */
+            border: 2px solid rgba(255, 127, 0, 1); /* Main color */
+            border-radius: 0.375rem; /* Rounded corners */
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .custom-checkbox:checked {
+            background-color: rgba(255, 127, 0, 1); /* Main color when checked */
+            border-color: rgba(255, 127, 0, 1);
+        }
+
+        /* Adjusting the heading size */
+        .heading {
+            font-size: 2rem; /* Further reduced font size */
+        }
+
+        /* Adjusting the text position */
+        .text-container {
+            transform: translateX(-10%); /* Shift the text to the left */
+        }
+
+        /* Remove blue border on focus for inputs */
+        input {
+            outline: none; /* Remove default outline */
+        }
+
+        input:focus {
+            border-color: rgba(255, 127, 0, 1) !important; /* Maintain the main color on focus */
+            box-shadow: none; /* Remove default shadow */
+        }
+
+        /* Refresh icon */
+        .refresh-icon {
+            width: 24px; /* Width of the icon */
+            height: 24px; /* Height of the icon */
+            border: 3px solid rgba(255, 127, 0, 1); /* Main color */
+            border-radius: 50%;
+            position: relative;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .refresh-icon::before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            border: 3px solid rgba(255, 127, 0, 1); /* Main color */
+            border-radius: 50%;
+            top: 25%;
+            left: 25%;
+            transform: rotate(45deg);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-50">
+    <div class="flex flex-col md:flex-row bg-white p-8 rounded-lg shadow-lg w-[1152px] h-[648px]"> 
+        <!-- Left Section with Text and Image -->
+        <div class="flex-1 flex items-center justify-center p-6 bg-gray-100 rounded-lg">
+            <div class="text-center text-container"> 
+                <h3 class="heading font-bold mb-8"> 
+                    Manage your courses<br />
+                    and team in an easy<br />
+                    way
+                </h3>
+                <img src="Frame.png" alt="Illustration" class="w-72 h-auto">
+            </div>
+        </div>
+        
+        <!-- Right Section with Form -->
+        <div class="flex-1 p-6">
+            <h2 class="text-3xl font-bold mb-6">Sign in to Xepho</h2>
+            
+            <!-- Sign in with Google Button -->
+            <div class="flex items-center justify-between mb-6">
+                <button class="w-full py-3 rounded-lg text-white font-semibold" style="background-color: rgba(255, 127, 0, 1);">
+                    Sign in with Google
+                </button>
+                <!-- Refresh icons beside the button -->
+                <div class="ml-4 flex">
+                    <button class="p-2 border rounded-lg border-orange-500">
+                        <div class="refresh-icon"></div>
+                    </button>
+                    <button class="p-2 border rounded-lg border-orange-500 ml-2">
+                        <div class="refresh-icon"></div>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="flex items-center mb-6">
+                <hr class="flex-1 border-gray-300" />
+                <span class="mx-2 text-gray-500">Or</span>
+                <hr class="flex-1 border-gray-300" />
+            </div>
+            
+            <!-- Form Fields -->
+            <form id="signInForm" onsubmit="return validateForm()">
+                <!-- Email -->
+                <div class="mb-6">
+                    <label class="block mb-2 text-gray-700" for="email">Email</label>
+                    <input class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:border-orange-500" type="email" id="email" placeholder="Input your email here" required>
+                    <div id="emailError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid email.</div>
+                </div>
+                
+                <!-- Password -->
+                <div class="mb-6 relative">
+                    <label class="block mb-2 text-gray-700" for="password">Password</label>
+                    <input class="w-full p-3 border rounded-lg focus:outline-none focus:ring focus:border-orange-500" type="password" id="password" placeholder="Input your password here" required>
+                    <button type="button" id="togglePassword" class="absolute right-3 top-10" onclick="togglePasswordVisibility()">
+                        <span id="eyeIcon" class="text-gray-700">👁️</span> <!-- Eye icon for toggling -->
+                    </button>
+                </div>
+
+                <!-- Remember me and Forgot password -->
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" class="custom-checkbox"> 
+                        <label for="remember" class="text-gray-700 ml-2">Remember me</label> 
+                    </div>
+                    <a href="password-reset.html" class="text-orange-500">Forgot password?</a>
+                </div>
+                
+                <!-- Sign In Button -->
+                <button type="submit" class="w-full py-3 rounded-lg text-white font-semibold" style="background-color: rgba(255, 127, 0, 1);">
+                    Sign In
+                </button>
+            </form>
+            
+            <!-- Sign Up Option -->
+            <div class="mt-6 text-center">
+                <p class="text-gray-500">Doesn't have an account? <a href="signup.html" class="text-orange-500 font-semibold">Sign up now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.getElementById('togglePassword');
+            const eyeIcon = document.getElementById('eyeIcon');
+            const inputType = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = inputType;
+
+            // Change the icon based on visibility
+            eyeIcon.textContent = inputType === 'password' ? '👁️' : '🙈'; // Open eye icon
+        }
+
+        // Validate email input
+        function validateForm() {
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email pattern
+
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.classList.remove('hidden'); // Show error message
+                return false; // Prevent form submission
+            } else {
+                emailError.classList.add('hidden'); // Hide error message
+                return true; // Allow form submission
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+

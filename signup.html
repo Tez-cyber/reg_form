@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Multi-Step Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side: Image Section -->
+        <div class="image-section"></div>
+        
+        <!-- Right Side: Form Section -->
+        <div class="form-section">
+            <h1>Register</h1>
+
+            <!-- Step 1: Sign-Up Form -->
+            <div id="step1" class="step">
+                <h2>Sign Up</h2>
+                <form id="signUpForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I have read and agree to the Terms of Service</label>
+                    </div>
+                    <button type="button" onclick="nextStep(2)">Next</button>
+                    <button type="button" id="googleSignUp">Sign up with Google</button>
+                </form>
+            </div>
+
+            <!-- Step 2: Company Details -->
+            <div id="step2" class="step" style="display: none;">
+                <h2>Company Details</h2>
+                <form id="companyDetailsForm">
+                    <div class="form-group">
+                        <label for="companyName">Company Name:</label>
+                        <input type="text" id="companyName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyDescription">Company Description:</label>
+                        <textarea id="companyDescription" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="numberOfEmployees">Number of Employees:</label>
+                        <select id="numberOfEmployees">
+                            <option value="1-10">1-10</option>
+                            <option value="11-50">11-50</option>
+                            <option value="51-200">51-200</option>
+                            <option value="201+">201+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="companyLogo">Company Profile Picture:</label>
+                        <input type="file" id="companyLogo" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyLocation">Company Location:</label>
+                        <input type="text" id="companyLocation" required>
+                    </div>
+                    <button type="button" onclick="nextStep(3)">Next</button>
+                </form>
+            </div>
+
+            <!-- Step 3: Company Interests -->
+            <div id="step3" class="step" style="display: none;">
+                <h2>Your Company Interests</h2>
+                <form id="companyInterestsForm">
+                    <div class="form-group">
+                        <label>What are your company interests?</label>
+                        <div>
+                            <input type="checkbox" id="manageTasks">
+                            <label for="manageTasks">Manage Tasks</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="manageProjects">
+                            <label for="manageProjects">Manage Projects</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="manageTeam">
+                            <label for="manageTeam">Manage Team</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="otherInterests">Other Interests (if any):</label>
+                        <input type="text" id="otherInterests">
+                    </div>
+                    <button type="button" onclick="nextStep(4)">Next</button>
+                </form>
+            </div>
+
+            <!-- Step 4: Confirmation -->
+            <div id="step4" class="step" style="display: none;">
+                <h2>Registration Successful!</h2>
+                <p>Thank you for registering. Your account has been created successfully.</p>
+                <button onclick="continueToDashboard()">Continue to Dashboard</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step) {
+            // Hide all steps
+            document.querySelectorAll('.step').forEach(s => s.style.display = 'none');
+
+            // Show the current step
+            if (step === 2) {
+                // Validate Step 1
+                if (document.getElementById('signUpForm').checkValidity()) {
+                    document.getElementById('step2').style.display = 'block';
+                } else {
+                    alert('Please fill out all fields correctly.');
+                }
+            } else if (step === 3) {
+                // Validate Step 2
+                if (document.getElementById('companyDetailsForm').checkValidity()) {
+                    document.getElementById('step3').style.display = 'block';
+                } else {
+                    alert('Please fill out all fields correctly.');
+                }
+            } else if (step === 4) {
+                // Validate Step 3
+                // Here you can add more validation for interests if necessary
+                document.getElementById('step4').style.display = 'block';
+            }
+        }
+
+        function continueToDashboard() {
+            // Redirect to the dashboard page
+            window.location.href = 'dashboard.html'; // Change this to your dashboard URL
+        }
+    </script>
+</body>
+</html>
+
+
+
