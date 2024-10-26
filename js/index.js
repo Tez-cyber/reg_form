@@ -9,22 +9,10 @@ const circles = document.querySelectorAll(".circle")
 
 let currentActive = 1;
 
-// =================== Signup page submission
-const regForm = document.getElementById("regForm")
-
-regForm?.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-    const successReg = './multi.html'
-    window.open(successReg)
-
-
-})
 
 // ======================= reveal password
 function showPassword() {
     const passwordInput = document.getElementById('password');
-    const toggleButton = document.getElementById('togglePassword');
     const eyeIcon = document.getElementById('eyeIcon');
     const inputType = passwordInput.type === 'password' ? 'text' : 'password';
     passwordInput.type = inputType;

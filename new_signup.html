@@ -63,32 +63,34 @@
                 <div class="flex gap-4">
                     <div class="inputLabel w-1/2 ">
                         <label for="">Full Name</label>
-                        <input class="inputItem" type="text" placeholder="Input your full name here">
+                        <input class="inputItem" type="text" id="fullname" name="fullname" placeholder="Input your full name here">
                     </div>
                     <div class="inputLabel w-1/2">
                         <label for="">Username</label>
-                        <input class="inputItem" type="text" placeholder="Input your username here">
+                        <input class="inputItem" type="text" id="username" name="username" placeholder="Input your username here">
                     </div>
                 </div>
                 <!-- ==== Email ==== -->
                 <div class="inputLabel">
                     <label for="">Email</label>
-                    <input class="inputItem" type="email" placeholder="Input your email here">
+                    <input class="inputItem" type="email" id="email" name="email" placeholder="Input your email here">
                 </div>
                 <!-- ==== Password ==== -->
                 <div class="inputLabel">
                     <label for="">Password</label>
-                    <input class="inputItem" type="password" placeholder="Input your password here">
+                    <input class="inputItem" type="password" id="password" name="password" placeholder="Input your password here">
                 </div>
                 <!-- ====== Terms of service -->
                 <section class="flex items-center">
-                    <input type="checkbox" class="mr-2 border-none" name="">
-                    <label for="" class="text-sm text-gray-400">
+                    <input type="checkbox" id="agree" name="agree" class="mr-2 border-none" name="">
+                    <label for="" class="text-sm text-gray-400 ml-2">
                         I have read and agree to the Terms of Service
                     </label>
                 </section>
+                <!-- ========== Display Error Message -->
+                <div id="regError" class="text-red-600 my-4 text-sm"></div>
                 <!-- ============== Create  -->
-                <section class="my-10 flex flex-col items-center justify-between md:flex-row">
+                <section class="my-5 flex flex-col items-center justify-between md:flex-row">
                     <input type="submit" class="bg-bright rounded-md py-3 px-4 w-[192px] text-sm text-white" value="Create account">
                     <div class="text-sm py-5">
                         <span class="text-gray-400">
@@ -102,7 +104,7 @@
             </form>
         </section>
     </main>
-    <script src="js/index.js"></script>
+    <script src="js/handleSignup.js"></script>
 </body>
 
 </html>
