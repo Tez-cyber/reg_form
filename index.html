@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In UI</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/index.js"></script>
     <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script> -->
 </head>
 
@@ -68,9 +67,12 @@
                     <input class="inputItem" type="email" placeholder="Input your email here">
                 </div>
                 <!-- ==== Password ==== -->
-                <div class="inputLabel">
+                <div class="inputLabel relative">
                     <label for="">Password</label>
-                    <input class="inputItem" type="password" placeholder="Input your password here">
+                    <input class="inputItem" id="password" type="password" placeholder="Input your password here">
+                    <div id="revealPassword" onclick="showPassword()" class="absolute right-3 top-10">
+                        <span id="eyeIcon" class="text-gray-700 cursor-pointer">👁️</span> <!-- Eye icon for toggling -->
+                    </div>
                 </div>
                 <!-- ====== Terms of service -->
                 <section class="flex items-center justify-between">
@@ -88,7 +90,7 @@
                 </section>
                 <!-- ============== Create  -->
                 <section class="my-10 flex flex-col items-center justify-between md:flex-row">
-                    <button class="bg-bright rounded-md py-3 px-4 w-[192px] text-sm text-white">Sign in</button>
+                    <input type="submit" class="bg-bright rounded-md py-3 px-4 w-[192px] text-sm text-white" value="Sign in">
                     <div class="text-sm py-5">
                         <span class="text-gray-400">
                             Doesn’t have an account?
@@ -104,17 +106,7 @@
 
     <script>
         // Toggle password visibility
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById('password');
-            const toggleButton = document.getElementById('togglePassword');
-            const eyeIcon = document.getElementById('eyeIcon');
-            const inputType = passwordInput.type === 'password' ? 'text' : 'password';
-            passwordInput.type = inputType;
-
-            // Change the icon based on visibility
-            eyeIcon.textContent = inputType === 'password' ? '👁️' : '🙈'; // Open eye icon
-        }
-
+        
         // Validate email input
         function validateForm() {
             const emailInput = document.getElementById('email');
@@ -130,6 +122,7 @@
             }
         }
     </script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

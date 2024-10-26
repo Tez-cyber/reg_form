@@ -590,6 +590,22 @@ video {
   }
 }
 
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.right-3{
+  right: 0.75rem;
+}
+
+.top-10{
+  top: 2.5rem;
+}
+
 .z-\[-1\]{
   z-index: -1;
 }
@@ -690,6 +706,10 @@ video {
 
 .flex-1{
   flex: 1 1 0%;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .flex-col{
@@ -902,6 +922,11 @@ video {
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-700{
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-white{
