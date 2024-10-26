@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         bright: "#ff8000",
+        pale: "#fff0e0",
         newGrey: "#f7f7fc"
       }
     },

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="flex flex-col justify-center font-inter md:flex-row">
+        <!-- ================ First section =================== -->
+        <section class=" bg-newGrey z-[10] md:w-1/2">
+            <div class="px-12 w-full py-[64px]">
+                <div class="">
+                    <!-- ========= Medium screen -->
+                    <h2 class="hidden text-4xl pb-20 px-16 leading-snug font-semibold md:block">Manage your courses <br>
+                        and team in an
+                        easy <br> way
+                    </h2>
+                    <!-- ================ Small screen ============= -->
+                    <h2 class="text-3xl pb-20  leading-snug font-semibold md:px-16 md:hidden">
+                        Manage your courses and team in an
+                        easy way
+                    </h2>
+                </div>
+                <img class="w-[537] h-[369]" src="./assets/Frame.png" alt="">
+            </div>
+        </section>
+        <!-- ================ Second section =================== -->
+        <div class="container">
+            <!-- ====== First form ====== -->
+            <form id="form1" class="">
+                <h2 class="text-2xl font-semibold">Tell us about your company</h2>
+                <span class="pb-10 pt-3 block text-sm text-gray-400">
+                    Who are you? What’s your company or organisation all about?
+                </span>
+                <!-- ==== Email ==== -->
+                <div class="inputLabel">
+                    <label for="">Your Company Name</label>
+                    <input class="inputItem" type="email" placeholder="Input your Company Name here">
+                </div>
+                <!-- ==== Password ==== -->
+                <div class="inputLabel">
+                    <label>Your Company Description</label>
+                    <input class="inputItem" type="password" placeholder="Tell me about what your company looks like" />
+                </div>
+                <!-- ====  ==== -->
+                <div class="inputLabel">
+                    <label>How many Employess ?</label>
+                    <div class="flex">
+                        <div class="w-1/2 flex gap-3">
+                            <input class="paleinputItem" type="text" value="1 - 10" />
+                            <input class="paleinputItem" type="text" value="20 - 30" />
+                            <input class="paleinputItem" type="text" value="50 +" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 mb-5 md:mb-0">
+                    <button id="next1" class="btn py-1" type="button">
+                        Next
+                    </button>
+                </div>
+            </form>
+            <!-- ==== Second form ==== -->
+            <form id="form2" class="">
+                <h2 class="text-2xl font-semibold">Complete your company profile</h2>
+                <span class="pb-10 pt-3 block text-sm text-gray-400">
+                    Who are you? What’s your company or organisation all about?
+                </span>
+                <!-- ==== First ==== -->
+                <div class="inputLabel">
+                    <label>Your Company Description</label>
+                    <input class="inputItem" type="text" placeholder="Tell me about what your company looks like" />
+                </div>
+                <!-- ==== Second ==== -->
+                <div class="inputLabel">
+                    <label>Your Company Location</label>
+                    <input class="inputItem" type="text" placeholder="What is the address of your company" />
+                </div>
+                <!-- ==== Button  ==== -->
+                <div class="mt-6">
+                    <button id="next2" class="btn py-1" type="button">
+                        Next
+                    </button>
+                </div>
+            </form>
+            <!-- ==== Third form ==== -->
+            <form id="form3" class="">
+                <h2 class="text-2xl font-semibold">What’s your company interest?</h2>
+                <span class="pb-10 pt-3 block text-sm text-gray-400">
+                    We want to know what’s your company interest
+                </span>
+                <!-- ==== First ==== -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex items-center">
+                        <input type="checkbox" class="border-none" />
+                        <label class="text-sm ml-2 text-gray-400">
+                            To manage the tasks
+                        </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="border-none" />
+                        <label class="text-sm ml-2 text-gray-400">
+                            To manage the projects
+                        </label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" class="border-none" />
+                        <label class="text-sm ml-2 text-gray-400">
+                            To manage the team
+                        </label>
+                    </div>
+                </div>
+                <!-- ==== Other ==== -->
+                <div class="inputLabel my-10">
+                    <label>Other option</label>
+                    <input class="inputItem" type="text" placeholder="Input your option" />
+                </div>
+                <!-- ==== Button  ==== -->
+                <div class="mt-6">
+                    <button id="next3" class="btn py-1" type="button">
+                        Next
+                    </button>
+                </div>
+            </form>
+            <!-- ==== Fourth form ==== -->
+            <form id="form4" class="">
+                <div class="">
+                    <h2 class="text-2xl font-semibold">Registration completed</h2>
+                </div>
+                <!-- ==== Button  ==== -->
+                <div class="mt-6">
+                    <button id="submit" class="btn py-1" type="button">
+                        Continue
+                    </button>
+                </div>
+            </form>
+
+            <!-- Progress bar -->
+            <div class="progress_container">
+                <div class="progress" id="progress"></div>
+                <div class="circle active">1</div>
+                <div class="circle">2</div>
+                <div class="circle">3</div>
+                <div class="circle">4</div>
+            </div>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

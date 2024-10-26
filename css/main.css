@@ -590,20 +590,12 @@ video {
   }
 }
 
-.absolute{
-  position: absolute;
+.z-\[-1\]{
+  z-index: -1;
 }
 
-.relative{
-  position: relative;
-}
-
-.right-3{
-  right: 0.75rem;
-}
-
-.top-10{
-  top: 2.5rem;
+.z-\[10\]{
+  z-index: 10;
 }
 
 .mx-2{
@@ -624,28 +616,20 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-6{
-  margin-bottom: 1.5rem;
+.mb-5{
+  margin-bottom: 1.25rem;
 }
 
-.mb-8{
-  margin-bottom: 2rem;
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 
 .ml-2{
   margin-left: 0.5rem;
 }
 
-.ml-4{
-  margin-left: 1rem;
-}
-
 .mr-2{
   margin-right: 0.5rem;
-}
-
-.mt-1{
-  margin-top: 0.25rem;
 }
 
 .mt-6{
@@ -664,20 +648,16 @@ video {
   display: none;
 }
 
+.h-\[359\]{
+  height: 359;
+}
+
 .h-\[369\]{
   height: 369;
 }
 
-.h-\[648px\]{
-  height: 648px;
-}
-
-.h-auto{
-  height: auto;
-}
-
-.h-12{
-  height: 3rem;
+.max-h-screen{
+  max-height: 100vh;
 }
 
 .min-h-screen{
@@ -688,56 +668,20 @@ video {
   width: 50%;
 }
 
-.w-72{
-  width: 18rem;
-}
-
-.w-\[1152px\]{
-  width: 1152px;
+.w-\[192px\]{
+  width: 192px;
 }
 
 .w-\[537\]{
   width: 537;
 }
 
-.w-full{
-  width: 100%;
-}
-
-.w-\[\]{
-  width: ;
-}
-
-.w-\[400px\]{
-  width: 400px;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-\[192px\]{
-  width: 192px;
-}
-
-.w-\[70\]{
-  width: 70;
-}
-
-.w-\[70\%\]{
-  width: 70%;
-}
-
-.w-\[19\]{
-  width: 19;
-}
-
 .w-\[60\%\]{
   width: 60%;
 }
 
-.w-\[50\%\]{
-  width: 50%;
+.w-full{
+  width: 100%;
 }
 
 .max-w-sm{
@@ -764,10 +708,6 @@ video {
   justify-content: space-between;
 }
 
-.gap-4{
-  gap: 1rem;
-}
-
 .gap-2{
   gap: 0.5rem;
 }
@@ -776,12 +716,8 @@ video {
   gap: 0.75rem;
 }
 
-.gap-5{
-  gap: 1.25rem;
-}
-
-.gap-8{
-  gap: 2rem;
+.gap-4{
+  gap: 1rem;
 }
 
 .rounded-lg{
@@ -808,19 +744,14 @@ video {
   border-style: none;
 }
 
-.border-gray-300{
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
-.border-orange-500{
-  --tw-border-opacity: 1;
-  border-color: rgb(249 115 22 / var(--tw-border-opacity));
-}
-
 .border-bright{
   --tw-border-opacity: 1;
   border-color: rgb(255 128 0 / var(--tw-border-opacity));
+}
+
+.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
 .bg-\[\#FF7F00\]{
@@ -833,24 +764,9 @@ video {
   background-color: rgb(255 128 0 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.bg-gray-50{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
 .bg-newGrey{
   --tw-bg-opacity: 1;
   background-color: rgb(247 247 252 / var(--tw-bg-opacity));
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .object-contain{
@@ -858,34 +774,17 @@ video {
      object-fit: contain;
 }
 
-.object-cover{
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .p-2{
   padding: 0.5rem;
-}
-
-.p-3{
-  padding: 0.75rem;
 }
 
 .p-6{
   padding: 1.5rem;
 }
 
-.p-8{
-  padding: 2rem;
-}
-
-.p-\[64px\]{
-  padding: 64px;
-}
-
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-12{
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .px-16{
@@ -893,9 +792,24 @@ video {
   padding-right: 4rem;
 }
 
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-\[64px\]{
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-10{
@@ -913,78 +827,30 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-\[64px\]{
   padding-top: 64px;
   padding-bottom: 64px;
 }
 
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-\[px\]{
-  padding-top: px;
-  padding-bottom: px;
-}
-
-.py-\[80px\]{
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.py-\[100px\]{
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.px-\[64px\]{
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
-.px-1{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-5{
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .pb-20{
   padding-bottom: 5rem;
 }
 
-.pt-\[100px\]{
-  padding-top: 100px;
-}
-
-.pt-\[\]{
-  padding-top: ;
+.pt-3{
+  padding-top: 0.75rem;
 }
 
 .pt-\[80px\]{
   padding-top: 80px;
-}
-
-.pt-5{
-  padding-top: 1.25rem;
-}
-
-.text-center{
-  text-align: center;
 }
 
 .font-inter{
@@ -1038,21 +904,6 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-gray-700{
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-orange-500{
-  --tw-text-opacity: 1;
-  color: rgb(249 115 22 / var(--tw-text-opacity));
-}
-
-.text-red-500{
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1069,6 +920,112 @@ video {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
+/* ============= Multi form classes ============== */
+
+.container{
+  position: relative;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 40px;
+  transition-property: .5s ease-in;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 768px){
+  .container{
+    width: 50%;
+    overflow-x: hidden;
+  }
+}
+
+.container form{
+  position: absolute;
+  margin-top: 50px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+#form2{
+  left: -100%;
+}
+
+#form3{
+  left: -100%;
+}
+
+#form4{
+  left: -100%;
+}
+
+/* ===== Progress Bar  */
+
+.progress_container{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress_container::before{
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  height: 0.25rem;
+  width: 100%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.progress{
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 1;
+  height: 0.25rem;
+  width: 0px;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 128 0 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.circle{
+  z-index: 1;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+  transition-property: .4s ease-in;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.active{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 128 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* =================================== */
 
 .inputItem{
   width: 100%;
@@ -1105,6 +1062,92 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-weight: 700;
+}
+
+.paleinputItem{
+  width: 104px;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 240 224 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 240 224 / var(--tw-text-opacity));
+}
+
+.paleinputItem:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 128 0 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 128 0 / var(--tw-text-opacity));
+}
+
+.btn{
+  cursor: pointer;
+  border-radius: 4px;
+  border-width: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 128 0 / var(--tw-bg-opacity));
+  padding: 10px 40px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.btn:active{
+  --tw-scale-x: .98;
+  --tw-scale-y: .98;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/* custom checkboxes */
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  border-color: 0.15em solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(255 128 0 / var(--tw-border-opacity))
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* box-shadow: inset 1em 1em var(--form-control-color); */
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 128 0 / var(--tw-bg-opacity))
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }
 
 /* Custom styles for the checkbox */
@@ -1197,47 +1240,17 @@ input:focus {
   }
 }
 
-.placeholder\:text-xs::-moz-placeholder{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.placeholder\:text-xs::placeholder{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .hover\:bg-\[\#FF7F00\]\/80:hover{
   background-color: rgb(255 127 0 / 0.8);
 }
 
-.focus\:border-orange-500:focus{
-  --tw-border-opacity: 1;
-  border-color: rgb(249 115 22 / var(--tw-border-opacity));
-}
-
-.focus\:outline-none:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.focus\:ring:focus{
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
 @media (min-width: 768px){
+  .md\:mb-0{
+    margin-bottom: 0px;
+  }
+
   .md\:block{
     display: block;
-  }
-
-  .md\:inline-block{
-    display: inline-block;
-  }
-
-  .md\:flex{
-    display: flex;
   }
 
   .md\:hidden{
