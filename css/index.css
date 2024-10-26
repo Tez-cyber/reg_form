@@ -61,14 +61,13 @@
         @apply outline-none border-0 cursor-pointer text-base rounded-[4px] bg-bright text-white p-[10px_40px] active:outline-none active:scale-[.98]
     }
 
+    .disabled {
+        @apply outline-none border-0 cursor-not-allowed rounded-[4px] text-black bg-[#ddd] p-[4px_40px]
+      }
     /* custom checkboxes */
-    input[type="checkbox"] {
-        /* Add if not using autoprefixer */
+    /* input[type="checkbox"] {
         -webkit-appearance: none;
         appearance: none;
-        /* For iOS < 15 to remove gradient background */
-
-        /* Not removed via appearance */
         margin: 0;
         font: inherit;
         color: currentColor;
@@ -86,13 +85,12 @@
         height: 0.65em;
         transform: scale(0);
         transition: 120ms transform ease-in-out;
-        /* box-shadow: inset 1em 1em var(--form-control-color); */
         @apply bg-bright
     }
 
     input[type="checkbox"]:checked::before {
         transform: scale(1);
-    }
+    } */
 
 }
 

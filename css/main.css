@@ -624,19 +624,14 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-5{
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .mb-2{
@@ -944,14 +939,14 @@ video {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-red-600{
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-lg{
@@ -1158,42 +1153,32 @@ video {
 
 /* custom checkboxes */
 
-input[type="checkbox"] {
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  /* For iOS < 15 to remove gradient background */
-  /* Not removed via appearance */
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-  transform: translateY(-0.075em);
-  display: grid;
-  place-content: center;
-  border-color: 0.15em solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 128 0 / var(--tw-border-opacity))
-}
+/* input[type="checkbox"] {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+        font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid currentColor;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        @apply border-[0.15em_solid] border-bright grid place-content-center
+    }
 
-input[type="checkbox"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  /* box-shadow: inset 1em 1em var(--form-control-color); */
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 128 0 / var(--tw-bg-opacity))
-}
+    input[type="checkbox"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        @apply bg-bright
+    }
 
-input[type="checkbox"]:checked::before {
-  transform: scale(1);
-}
+    input[type="checkbox"]:checked::before {
+        transform: scale(1);
+    } */
 
 /* Custom styles for the checkbox */
 

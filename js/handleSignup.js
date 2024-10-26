@@ -1,7 +1,8 @@
 // =================== Signup page submission
 const regForm = document.getElementById("regForm")
 const errMessage = document.getElementById("regError");
-const AgreeTerms = document.getElementById("agree").checked
+const AgreeTerms = document.getElementById("agree")
+const submitBtn = document.getElementById("submit")
 
 regForm?.addEventListener("submit", (e) => {
     e.preventDefault()
@@ -32,13 +33,14 @@ regForm?.addEventListener("submit", (e) => {
         );
         return;
     }
+    
 
-    // if (AgreeTerms) {
-    //     showErr(
-    //         "Pls agree to terms"
-    //     )
-    //     return;
-    // }  
+    if (!AgreeTerms.checked) {
+        showErr(
+            "Pls agree to terms"
+        )
+        return;
+    }
     regForm.reset()
     const successReg = './multi.html'
     window.open(successReg)
